@@ -1,0 +1,81 @@
+ol{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol li{
+  clear: both;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+label{
+  float: left;
+  width: 200px
+
+}
+
+input{ border: 1px solid #333; }
+input:focus{ background-color: #ffe; }
+
+textarea{
+  width: 30%; /* Ширина поля в процентах */
+  height: 70px; /* Высота поля в пикселах */
+}
+
+body{
+background-color: #AFEEEE
+
+
+}
+
+table {
+border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
+border: 1px solid grey; /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+}
+
+th {border: 1px solid green;}
+
+td {border: 1px solid green;}
+
+
+table {width: 900px;}
+th {width: 40%;}
+td:first-child {width: 40%;}
+
+
+
+div.form{
+margin-top: 1px;
+}
+
+
+div.wrapper {
+width: 1100px;
+}
+div.left_block {
+float: left;
+width: 1px;
+}
+div.right_block {
+float: right;
+width: 1px;
+}
+
+div.button_pdf{
+margin-top: 10px;
+margin-left: 82%;
+}
+
+img {
+width:200px;
+height: 250px;
+}
+
+
+
+
+
+
+

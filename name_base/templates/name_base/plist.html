@@ -1,0 +1,25 @@
+    {% extends 'name_base/base.html' %}
+
+    {% block content %}
+     <h1 style="color: blue;" align="center">Список команд</h1>     
+               <table>
+               
+               <tr>
+                 <th class="col1">Название</th><th class="col1">Проекты</th><th class="col1">Медиа</th><th class="col1">Кейсы</th>
+               </tr>
+               </table>
+        {% for post in posts %}
+        
+         <form>
+
+           <div class="post">         
+             <table width="100%">
+               <tr>
+                 <th class="col1"><a href="{% url 'inform' slug=post.slug %}">{{ post.comandname }}</a></th><td class="col2"><p align="center">{{ post.mark }}</p></td><td class="col2"><p align="center">{{ post.mark2 }}</p></td><td class="col3"><p align="center">{{ post.mark3 }}</p></td><td class="col3"><p align="center">{{ post.mark4 }}</p></td><td class="col3"><p align="center">{{ post.mark5 }}</p></td><td class="col3"><p align="center">{{ post.mark6 }}</p></td><td class="col3"><p align="center">{{ post.mark7 }}</p></td><td class="col3"><p align="center">{{ post.mark8 }}</p></td><td class="col3"><p align="center">{{ post.mark9 }}</p></td><td class="col3"><p align="center">{{ post.mark10 }}</p></td>
+               </tr>        
+             </table>
+           </div>
+         </form>
+        {% endfor %}
+    {% endblock content %}
+<td><p><a href="{% url 'inform' slug=post.slug %}">Просмотр</a></p></td>

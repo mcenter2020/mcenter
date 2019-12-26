@@ -1,0 +1,15 @@
+{% extends 'name_base/base.html' %}
+
+
+
+{% block content %}
+<form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+
+  <fieldset id="personal">
+    <legend>Контактная информация</legend>
+    {{ form.as_p }}
+
+</p><button type="submit" class="save btn btn-default">Сохранить</button>
+</form>
+{% endblock %}
+

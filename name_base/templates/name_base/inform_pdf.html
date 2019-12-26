@@ -1,0 +1,35 @@
+    {% block content %}
+<div class="form">
+<form>
+
+  <fieldset id="personal">
+    <legend><h4>Информация о команде</h4></legend>       
+       <div class="wrapper">
+       <div class="left_block">
+       <table>      
+        <tr><th>Название: <td>{{ post.comandname }}           
+        <tr><th>Капитан: <td>{{ post.capitan }}
+        <tr><th>Населенный пункт: <td>{{ post.city }}
+        <tr><th>Контактный телефон: <td>{{ post.phone }}
+        <tr><th>E-mail: <td>{{ post.email }}
+        <tr><th>Поощрения: <td>{{ post.promotion }}
+        <tr><th>Выговоры: <td>{{ post.rebuke }}
+        </table>
+        <table>
+        <tr><th>Оценки жюри: <td>{{ post.mark }}:<td>{{ post.mark2 }}:<td>{{ post.mark3 }}:<td>{{ post.mark4 }}:<td>{{ post.mark5 }}:<td>{{ post.mark6 }}:<td>{{ post.mark7 }}:<td>{{ post.mark8 }}:<td>{{ post.mark9 }}:<td>{{ post.mark10 }}
+       </table>
+       </div>
+       <div class="right_block">
+       {% if post.image %}
+       <img src="{{ post.image.url }}"{{ post.image.name }} class="img-responsive">
+       {% else %}
+        <p><font color="#FF0000;"><h3>-----------------------</h3></font></p>
+       {% endif %}
+       </div>
+       <p><font color="#FF0000;"><h6>Балахтинский Молодежный Центр!</h6></font></p>
+       </div>
+</form>
+
+
+    {% endblock %}
+ 

@@ -1,0 +1,49 @@
+    {% extends 'name_base/base.html' %} 
+ 
+    {% block content %}
+
+
+<a class="btn btn-default" href="{% url 'personal' %}"></a>
+
+
+<div class="form">
+<form>
+
+  <fieldset id="personal">
+    <legend><h1>Контактная информация</h1></legend>       
+       <div class="wrapper">
+       <div class="left_block">
+       <table>      
+        <tr><th>Название: <td>{{ post.comandname }}           
+        <tr><th>Капитан: <td>{{ post.capitan }}
+        <tr><th>Населенный пункт: <td>{{ post.city }}
+        <tr><th>Контактный телефон: <td>{{ post.phone }}
+        <tr><th>E-mail: <td>{{ post.email }}
+        <tr><th>Поощрения: <td>{{ post.promotion }}
+        <tr><th>Выговоры: <td>{{ post.rebuke }}
+       </table>
+       </div>
+ 
+ 
+       <div class="right_block">
+       {% if post.image %}
+       <img src="{{ post.image.url }}"{{ post.image.name }} class="img-responsive">
+       {% else %}
+        <p><font color="#FF0000;"><h3>Добавьте логотип!</h3></font></p>
+       {% endif %}
+       </div>
+           
+    
+  
+       
+       </div>
+</form>
+ </div>
+        <div class="button_pdf"> 
+        <a href="{% url 'inform_pdf' slug=post.slug %}">PDF</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{% url 'inform_edit' slug=post.slug %}">Изменить</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{% url 'plist' %}">Выход</a>
+        </div>
+
+
+
+    {% endblock %}
+ 
